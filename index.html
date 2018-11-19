@@ -51,8 +51,8 @@
   <div class="header-tree"></div>
 
   <h1 class="header-title section-title">
-    Code&thinsp;and&thinsp;Magick
-    <img src="img/title-site.png" alt="Code and magick">
+    Code&thinsp;and&thinsp;Magic
+    <img src="img/title-site.png" alt="Code and magic">
   </h1>
   <p class="header-description">
     Это игра, где главного героя, которым вам предстоит управлять и изменять заклинаниями окружающий мир зовут
@@ -181,6 +181,23 @@
   </div>
 </template>
 
+<script>
+  var fireballSize = 22;
+  var getFireballSpeed = function (left) {
+    return left ?  5 : 2;
+  }
+  var wizardSpeed = 3;
+  var wizardWidth = 70;
+  var getWizardHeight = function () {
+    return 1.337 * wizardWidth;
+  }
+  var getWizardX = function (width) {
+    return width / 2 - wizardWidth / 2;
+  }
+  var getWizardY = function (height) {
+    return height / 3 - getWizardHeight();
+  }
+</script>
 <script src="js/game.js"></script>
 
 </body>
